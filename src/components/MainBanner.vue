@@ -1,0 +1,40 @@
+<template>
+  <div class="container">
+    <div class="row">
+        <div class="col-5 col-md-3 col-lg" v-for="(item,i) in banData" :key="i">
+            <a :href="item.href">
+                <div class="imgWrap"><img :src="`./images/02iconBanner/${item.src}`" alt="" class="w-100"></div>
+                <div class="txt text-center">
+                    <p v-html="item.title" class="title"></p>
+                    <p v-html="item.subtitle" class="subtitle"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+    props:["banData"]
+}
+</script>
+
+<style lang="scss">
+
+.imgWrap{
+    height: 170px;
+}
+    img{
+        height: 140px;
+    }
+.txt{
+    .title{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .subtitle{
+        font-size: 15px;
+    }
+}
+</style>

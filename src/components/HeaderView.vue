@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md fixed-top">
+  <nav class="navbar navbar-expand-md">
         <div class="container position-relative">
         <a class="navbar-brand logo pe-5" href="#">
             <img src="../assets/images/new_logo.svg" alt="">
@@ -16,21 +16,21 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav pe-3">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link p-5" href="#">제이에이코리아</a>
+                    <a class="nav-link px-5" href="#">제이에이코리아</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-5" href="#">투명경영</a>
+                    <a class="nav-link px-5" href="#">투명경영</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-5" href="#">교육사업</a>
+                    <a class="nav-link px-5" href="#">교육사업</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-5" href="#">기관소식</a>
+                    <a class="nav-link px-5" href="#">기관소식</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-5" href="#">후원하기</a>
+                    <a class="nav-link ps-5" href="#">후원하기</a>
                 </li>
             </ul>
           </div>
@@ -51,7 +51,13 @@ export default {
             width: 218px;
         }
     }
+    .navbar{
+      height: 121px;
+    }
     .navbar-nav{
-        
+      margin-left: auto;
+      font-weight: bold;
+      font-size: 19px;
+      color: #000;
     }
 </style>
