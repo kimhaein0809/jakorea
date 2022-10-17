@@ -1,5 +1,5 @@
 <template>
-    <div class="visual mb-5">
+    <div class="visual">
       <swiper
       :navigation="true"
       :effect="'fade'"
@@ -35,7 +35,7 @@
         </swiper-slide>
       
       </swiper>
-      <div class="container position-relative w-100">
+      <div class="container position-relative">
           <div class="btnWrap ps-3">
             <div class="prev">
                 <i class="fa-solid fa-chevron-left"></i>
@@ -89,6 +89,7 @@
   };
   </script>
   <style lang="scss">
+  
   .visual{
     margin-left: auto;
     margin-right: auto;
@@ -177,5 +178,60 @@
           cursor: pointer;
         }
       }
+    }
+    @media (max-width: 1399px) {
+
+    }
+    @media (max-width: 1199px) {
+      .visual{
+      position: relative;
+      .txtW{
+        h1{
+            
+            font-size: 40px;
+            font-weight: lighter;
+            letter-spacing: -5px;
+            span{
+                font-weight: bold;
+            }
+        }
+        p{
+            font-weight: bold;
+            &.subt{
+                font-size: 16px;
+            }
+            &.btnt{
+                font-size: 15px;
+            }
+
+        }
+        .btn{
+            background: white;
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: 40px;
+            box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
+            i{
+                margin-left: 20px;
+            }
+        }
+      }
+    }
+    .mySwiper{
+      .swiper-slide{
+        .videoWrap{
+            left: 25%;
+        }
+      }
+    }    
+  }
+    @media (max-width: 991px) {
+      
+    }
+    @media (max-width: 767px) {
+      
+    }
+    @media (max-width: 575px) {
+      
     }
   </style>

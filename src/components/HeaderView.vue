@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-md">
-        <div class="container position-relative">
+    <div class="container position-relative h-100">
         <a class="navbar-brand logo pe-5" href="#">
-            <img src="../assets/images/new_logo.svg" alt="">
+            <img src="../assets/images/new_logo.svg" alt="" class="img-fluid">
         </a>
 
         <div class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
