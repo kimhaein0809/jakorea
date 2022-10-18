@@ -1,6 +1,7 @@
 <template>
     <div class="visual">
       <swiper
+      :slidesPerView="'auto'"
       :navigation="true"
       :effect="'fade'"
       :modules="modules"
@@ -226,7 +227,14 @@
     }    
   }
     @media (max-width: 991px) {
-      
+      .mySwiper{
+      .swiper-slide{
+        display: flex;
+        .videoWrap{
+            left: 15%;
+        }
+      }
+    }    
     }
     @media (max-width: 767px) {
       

@@ -11,36 +11,39 @@
         }"
       class="mySwiper"
       >
+      
         <swiper-slide
           v-for="(item) in swiperView"
           :key="item"
           :style="{'background-color':`white`}"
         >
             <!-- <div :style="{'background-color':`${item.color}`}" class="innerItem"> -->
-            <div class="container d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-center">
+                
                 <div class="row">
-                    <div class="txtW col-8">
+                    <div class="txtW col-7">
                         <h1 v-html="item.title"></h1>
                         <p v-html="item.subtitle" class="mt-3 subt"></p>
                         <a href="#" class="btn">
                             <p class="mb-0 btnt">자세히 보기<i class="fa-solid fa-arrow-right-long"></i></p>
                         </a>
                     </div>
-                    <div class="col-4">
-                        <img :src="`./images/03eduProgram/${item.src}`" alt="" class="img-fluid">
+                    <div class="col-5">
+                        <div class="imgWrap"><img :src="`./images/03eduProgram/${item.src}`" alt=""></div>
                     </div>
                 </div>
-            </div>      
-        </swiper-slide>
+            </div>   
+            <div class="gray"></div>   
+          </swiper-slide>
       
       </swiper>
       <div class="container position-relative">
           <div class="btnWrap ps-3">
             <div class="prev">
-                <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-arrow-left-long"></i>
             </div>
             <div class="next">
-                <i class="fa-solid fa-chevron-right"></i>
+              <i class="fa-solid fa-arrow-right-long"></i>
             </div>
           </div>
       </div>
@@ -76,6 +79,8 @@
         swiperOptions:{
           loop:true,
           navigation:{
+            nextEl:'.edu .next',
+            prevEl:'.edu .prev',
           },
         }
       };
@@ -84,6 +89,14 @@
 </script>
 
 <style lang="scss">
+.gray{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;left: calc(50% + 450px);
+  border-top-left-radius: 50px;
+  background: #f3f6f7;
+}
     .edu{
     margin-left: auto;
     margin-right: auto;
@@ -92,6 +105,20 @@
     padding: 0;z-index: 1;
     height: 745px;
   }
+  .btnWrap{
+        gap:1300px;
+        display: flex;
+        position: absolute;
+        bottom: 400px;
+        left: 0;
+        z-index: 10;
+        left: 0;
+        .next,.prev{
+          color: #A4ADB0;
+          font-size: 40px;
+          cursor: pointer;
+        }
+      }
     .mySwiper{
         position: relative;
         width: 100%;
@@ -102,6 +129,7 @@
         box-sizing: content-box;
       .swiper-slide{
         height: auto;width: 100%;
+        .row{padding-top: 140px;}
       }
     }
     .edu{
@@ -132,7 +160,11 @@
             }
         }
       }
-      
+      .imgWrap{
+        img{
+          height: 362px;
+        }
+      }
      
     }
 </style>
