@@ -7,4 +7,5 @@ a:link,a:visited{text-decoration: none;color: #333;}
   width: 1260px;
   margin: 0 auto;
 }
+a:hover{color: #333 !important}
 body{ font-family: 'NanumSquareAc', sans-serif }

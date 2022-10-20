@@ -2,7 +2,7 @@
     <swiper
        v-bind="swiperOptions1"
       :modules="modules1"
-      class="mySwiper1"
+      class="mySwiper12"
     >
       <swiper-slide v-if="tab==1" v-for="item in notice" :key="item" :class="{notice:tab=1}">
         <h4>{{item.name}}</h4> 
@@ -25,8 +25,15 @@
         <br>
         <p class="con">{{item.subtitle}}</p>
       </swiper-slide>
-
     </swiper>
+    <div class="btnWrap2 position-relative d-flex">
+      <div class="lBtn">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+      <div class="rBtn">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </div>
+    </div>
 
   </template>
   <script>
@@ -62,6 +69,10 @@
             slidesPerView:3,
             spaceBetween:30,
             loop:true,
+            navigation:{
+              nextEl:'.rBtn',
+              prevEl:'.lBtn',
+            },
             observer: true,
             observeParents: true,
         
@@ -71,9 +82,9 @@
   };
   </script>
 <style lang="scss">
-.mySwiper1{
-  margin: 0 100px;
-}
+.mySwiper12{
+  margin: 0 150px;
+
     .swiper-slide{
       cursor: pointer;
       margin-bottom: 150px;
@@ -101,7 +112,21 @@
         line-clamp: 3;
         overflow: hidden;
       }
+      
         height: 400px;
     }
+  }
+  .btnWrap2{
+    bottom: 400px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .lBtn,.rBtn{
+        background: white;
+        padding: 15px 25px;
+        border-radius: 40px;
+        box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
+        cursor: pointer;
+      }
 </style>
   

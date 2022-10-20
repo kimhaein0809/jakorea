@@ -23,14 +23,16 @@ export default {
 </script>
 
 <style lang="scss">
+
 .section{
     margin-top: 100px;
 }
+img{transition: .5s;}
 .item{
     :hover{
         img{
             transform: translateY(-20px);
-            transition: .5s;
+            
         }
     }
 }
