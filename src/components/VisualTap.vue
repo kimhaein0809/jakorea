@@ -1,7 +1,7 @@
 <template>
   <div class="tabVisual">
       <div class="container">
-        <div class="tabTop d-flex align-items-center">
+        <div class="tabTop d-flex">
             <h2>JA 기관소식</h2>
             <div class="mb-3 d-flex">
                 <div class="tab" @click="tab=1" :class="{active:tab==1}">공지사항</div>
@@ -66,5 +66,32 @@ export default {
             }
         }
 
+
     }
+    @media (max-width: 1399px) {
+
+}
+@media (max-width: 1199px) {
+  
+
+  
+}
+@media (max-width: 991px) {
+    .tabTop{
+        flex-direction: column;
+        align-items: start;
+    h2{
+        font-size: 40px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+}
+}
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 575px) {
+  
+}
 </style>

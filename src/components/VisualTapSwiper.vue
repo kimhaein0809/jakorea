@@ -3,6 +3,17 @@
        v-bind="swiperOptions1"
       :modules="modules1"
       class="mySwiper12"
+      :breakpoints="{
+      '500': {
+        slidesPerView: 1,
+      },
+      '768': {
+        slidesPerView: 2,
+      },
+      '1024': {
+        slidesPerView: 3,
+      },
+    }"
     >
       <swiper-slide v-if="tab==1" v-for="item in notice" :key="item" :class="{notice:tab=1}">
         <h4>{{item.name}}</h4> 

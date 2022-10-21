@@ -13,6 +13,7 @@
   </visual-tap>
   <main-notice :noData="nData" :reData="rData"></main-notice>
   <main-movie></main-movie>
+  <main-sponsor></main-sponsor>
 </template>
 
 <script>
@@ -33,6 +34,7 @@
   import news from "@/data/06news.js";
   import rData from "@/data/08result.js"
 import MainNotice from './components/MainNotice.vue'
+import MainSponsor from './components/MainSponsor.vue'
 
 export default {
   components:{
@@ -44,7 +46,8 @@ export default {
     MainGraph,
     VisualTap,
     MainNotice,
-    MainMovie
+    MainMovie,
+    MainSponsor
 },
 data(){
   return{
