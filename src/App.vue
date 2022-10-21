@@ -11,7 +11,8 @@
     :news="news"
     >
   </visual-tap>
-  <main-notice :noData="nData"></main-notice>
+  <main-notice :noData="nData" :reData="rData"></main-notice>
+  <main-movie></main-movie>
 </template>
 
 <script>
@@ -22,13 +23,15 @@
   import MainEducation from "./components/MainEducation.vue"
   import MainGraph from "./components/MainGraph.vue"
   import VisualTap from "./components/VisualTap.vue"
+  import MainMovie from "./components/MainMovie.vue"
 
   import bData from "@/data/02iconBanner.js";
   import eData from "@/data/03eduProgram.js";
   import nData from "@/data/07notice.js"
   import notice from "@/data/04notice.js";
   import story from "@/data/05story.js";
-  import news from "@/data/06news.js"
+  import news from "@/data/06news.js";
+  import rData from "@/data/08result.js"
 import MainNotice from './components/MainNotice.vue'
 
 export default {
@@ -41,6 +44,7 @@ export default {
     MainGraph,
     VisualTap,
     MainNotice,
+    MainMovie
 },
 data(){
   return{
@@ -50,6 +54,7 @@ data(){
     story: story,
     news: news,
     nData: nData,
+    rData: rData
   }
 }
 }

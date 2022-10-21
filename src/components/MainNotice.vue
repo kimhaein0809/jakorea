@@ -1,14 +1,14 @@
 <template>
   <div class="notice">
     <div class="container d-flex">
-      <div class="noticeBox">
-        <div class="noTop pb-4">
+      <div class="noticeBox noBox1">
+        <div class="noTop pb-4 ">
           <h1>모집공고</h1>
         </div>
         <div class="noBtm" v-for="(item,i) in noData" :key="i">
-          <div class="noItem">
+          <div class="noItem row">
               <a href="#">
-                <span class="tag">모집중</span>
+                <span class="tag col-2 text-center">모집중</span>
                 <div class="bdtxt">
                   <h3>{{item.title}}</h3>
                   <p>{{item.date}}</p>
@@ -21,10 +21,9 @@
         <div class="noTop pb-4">
           <h1>결과발표</h1>
         </div>
-        <div class="noBtm" v-for="(item,i) in noData" :key="i">
+        <div class="noBtm" v-for="(item,i) in reData" :key="i">
           <div class="noItem">
               <a href="#">
-                <span class="tag">모집중</span>
                 <div class="bdtxt">
                   <h3>{{item.title}}</h3>
                   <p>{{item.date}}</p>
@@ -39,7 +38,7 @@
 
 <script>
 export default {
-    props:["noData"]
+    props:["noData","reData"]
 }
 </script>
 
@@ -56,11 +55,12 @@ export default {
     padding: 8px 10px;
     background: #285f74;
     margin-right:15px;
+    color: white;font-weight: bold;border-radius: 20px;
   }
   .noItem{
     border-bottom: 1px solid #e7eced;
     position: relative;
-  transition: .3s;
+    transition: .3s;
   a{
     display: flex;
     align-items: flex-start;
@@ -85,5 +85,27 @@ export default {
   box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
   border-radius: 20px;
 }
+@media (max-width: 1399px) {
 
+}
+@media (max-width: 1199px) {
+
+}
+@media (max-width: 991px) {
+ .container{
+  flex-direction: column;
+ }
+ .noticeBox {
+    width: 100%;
+}
+.noBox1{
+  margin-bottom: 40px;
+}
+}
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 575px) {
+  
+}
 </style>
