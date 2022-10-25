@@ -26,8 +26,7 @@ export default {
 
 .section{
     margin-top: 100px;
-}
-img{transition: .5s;}
+    img{transition: .5s;}
 .item{
     :hover{
         img{
@@ -51,4 +50,6 @@ img{transition: .5s;}
         font-size: 15px;
     }
 }
+}
+
 </style>

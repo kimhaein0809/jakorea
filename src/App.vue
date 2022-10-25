@@ -13,7 +13,8 @@
   </visual-tap>
   <main-notice :noData="nData" :reData="rData"></main-notice>
   <main-movie></main-movie>
-  <main-sponsor></main-sponsor>
+  <main-sponsor :koData="kData"></main-sponsor>
+  <main-news></main-news>
 </template>
 
 <script>
@@ -25,7 +26,9 @@
   import MainGraph from "./components/MainGraph.vue"
   import VisualTap from "./components/VisualTap.vue"
   import MainMovie from "./components/MainMovie.vue"
+  import MainNews from "./components/MainNews.vue"
 
+  import kData from "@/data/09support.js";
   import bData from "@/data/02iconBanner.js";
   import eData from "@/data/03eduProgram.js";
   import nData from "@/data/07notice.js"
@@ -47,7 +50,8 @@ export default {
     VisualTap,
     MainNotice,
     MainMovie,
-    MainSponsor
+    MainSponsor,
+    MainNews
 },
 data(){
   return{
@@ -57,7 +61,8 @@ data(){
     story: story,
     news: news,
     nData: nData,
-    rData: rData
+    rData: rData,
+    kData: kData
   }
 }
 }

@@ -22,7 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
-   
+   .videoSec{
+    margin-bottom: 180px;
     .wrap{
         width: 100%;
         height: 900px;
@@ -64,5 +65,7 @@ export default {
         position: absolute;
         
     }
+    
+   }
     
 </style>

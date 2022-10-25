@@ -104,8 +104,7 @@
     overflow: hidden;
     padding: 0;z-index: 1;
     height: 745px;
-  }
-  .btnWrap{
+    .btnWrap{
         gap:1300px;
         display: flex;
         position: absolute;
@@ -132,6 +131,8 @@
         .row{padding-top: 140px;}
       }
     }
+  }
+  
     .edu{
       position: relative;
       .txtW{
