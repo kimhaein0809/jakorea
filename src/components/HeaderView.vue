@@ -18,19 +18,19 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link px-5" href="#">제이에이코리아</a>
+                    <a class="nav-link px-xl-5 px-md-3" href="#">제이에이코리아</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-5" href="#">투명경영</a>
+                    <a class="nav-link px-xl-5 px-md-3" href="#">투명경영</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-5" href="#">교육사업</a>
+                    <a class="nav-link px-xl-5 px-md-3" href="#">교육사업</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-5" href="#">기관소식</a>
+                    <a class="nav-link px-xl-5 px-md-3" href="#">기관소식</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ps-5" href="#">후원하기</a>
+                    <a class="nav-link px-xl-5 px-md-3" href="#">후원하기</a>
                 </li>
             </ul>
           </div>

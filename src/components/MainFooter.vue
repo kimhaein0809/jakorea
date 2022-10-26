@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="logo mb-5">
+            <div class="logo mb-md-5">
                 <img src="../assets/images/footer-logo.svg" alt="">
             </div>
             <p>서울특별시 강서구 양천로 583, B동 1408호(염창동, 우림블루나인비즈니스센터) 사단법인 제이에이코리아    우편번호 : 07547    대표 : 이은형    사업자번호 : 107-82-10367</p>
@@ -116,5 +116,64 @@ dl, ol, ul {
                 }
             }
         }
+    }
+    @media (max-width: 991px) {
+        
+    .footer{
+        a{font-size: 12px;}
+        p{color: #aaa;font-size: 12px;}
+
+        img{
+            opacity: .5;
+            width: 100px;
+        }
+        .footTop{
+            padding: 20px 0;
+            background: #f5f5f5;
+            .footinner{
+                justify-content: space-between;
+                a{
+                    color: #777;
+                }
+            }
+            .dropdown-menu{
+                border-radius: 10px;
+                .dropdown-item{
+                    color: #939393;
+                }
+            }
+            .btn{
+                background: white;
+                border-radius: 20px;
+                color: #939393;
+                width: 150px;
+                padding: 10px 20px;
+                font-size: 12px;
+                display: flex;align-items: center;justify-content: space-between;
+            }
+        }
+        
+        .footerBtm{
+            background: #fff;
+        }
+        .btm1{
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
+            a{
+                color: #767676;
+                font-weight: bold;
+            }
+            .sns{
+                color: #aaa;
+                font-weight: bold;
+                a{
+                    color: #aaa;
+                    font-size: 20px;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
     }
 </style>

@@ -120,5 +120,18 @@ ol, ul{margin-left: 0;}
             }
         }
   }
+  @media (max-width: 991px) {
+    .spon{
+      .btnWrap1{
+        display: none;
+      }
+    }
+    .txtW{
+      margin-bottom:50px;
+      .btn{
+        margin-top: 30px;
+      }
+    }
+  }
   
 </style>

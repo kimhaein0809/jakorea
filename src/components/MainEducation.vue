@@ -18,19 +18,21 @@
           :style="{'background-color':`white`}"
         >
             <!-- <div :style="{'background-color':`${item.color}`}" class="innerItem"> -->
-            <div class="container d-flex align-items-center justify-content-center">
+            <div class="container eduWrap">
                 
-                <div class="row">
-                    <div class="txtW col-7">
-                        <h1 v-html="item.title"></h1>
-                        <p v-html="item.subtitle" class="mt-3 subt"></p>
-                        <a href="#" class="btn">
-                            <p class="mb-0 btnt">자세히 보기<i class="fa-solid fa-arrow-right-long"></i></p>
-                        </a>
-                    </div>
-                    <div class="col-5">
-                        <div class="imgWrap"><img :src="`./images/03eduProgram/${item.src}`" alt=""></div>
-                    </div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <div class="row">
+                      <div class="txtW col-7">
+                          <h1 v-html="item.title"></h1>
+                          <p v-html="item.subtitle" class="mt-3 subt"></p>
+                          <a href="#" class="btn">
+                              <p class="mb-0 btnt">자세히 보기<i class="fa-solid fa-arrow-right-long"></i></p>
+                          </a>
+                      </div>
+                      <div class="col-5">
+                          <div class="imgWrap"><img :src="`./images/03eduProgram/${item.src}`" alt=""></div>
+                      </div>
+                  </div>
                 </div>
             </div>   
             <div class="gray"></div>   
@@ -97,6 +99,7 @@
   border-top-left-radius: 50px;
   background: #f3f6f7;
 }
+
     .edu{
     margin-left: auto;
     margin-right: auto;
@@ -168,4 +171,50 @@
       }
      
     }
+@media (max-width: 1399px) {
+
+}
+@media (max-width: 1199px) {
+ 
+}
+@media (max-width: 991px) {
+  .edutop{
+        margin-top: 180px;
+        display: flex;align-items: center;
+        h1{font-weight: bold;margin-right: 20px;margin-bottom: 20px;}
+        div{
+          margin-bottom: 20px;
+            .pro{
+            button{
+                font-size: 20px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+            }
+        }
+        }
+    }
+  .edu .mySwiper .swiper-slide .row {
+    padding-top: 0;
+  }
+  .edu .btnWrap{
+   display: none;
+  }
+  .edutop {flex-direction: column;align-items: start;}
+  .edu{
+    height: 500px;
+    .imgWrap{
+        img{
+          height: 200px;
+        }
+      }
+      
+  }
+}
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 575px) {
+  
+}
 </style>

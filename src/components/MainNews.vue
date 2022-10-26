@@ -3,7 +3,7 @@
       <div class="container bg position-relative">
         <form action="">
             <h1>JA Korea 뉴스레터 구독하기</h1>
-            <div class="d-flex gap-4">
+            <div class="d-flex gap-4 inpWrap">
                 <div class="name position-relative">
                     <i class="fa-regular fa-user position-absolute text-white"></i>
                     <input type="text" name="name" placeholder="이름">
@@ -122,6 +122,97 @@ export default {
             }
         }
     }
+}
+@media (max-width: 1199px) {
+  
+.news{
+    .email,.name{
+        i{
+            top: 12px;left: 15px;
+            font-size: 18px;
+        }
+    }
+    .imgWrap{
+        width: 280px;
+        bottom: 10px;
+        right: 10px;
+        
+    }
+    form{
+        .inpWrap{
+            input{
+            height: 40px;
+            width: 200px;
+        }
+        }
+        h1{
+            font-size: 20px;
+        }
+        
+        .btn{
+            border-color: white;
+            padding: 6px 20px;
+            border-radius: 10px;
+            color: white;
+            &:hover{
+                background: white;
+                color: rgb(0, 128, 150);
+            }
+        }
+    }
+}
+  
+}
+@media (max-width: 991px) {
+    .news{
+    .email,.name{
+        i{
+            top: 12px;left: 15px;
+            font-size: 18px;
+        }
+    }
+    .imgWrap{
+        width: 240px;
+        bottom: 40px;
+        right: 20px;
+        
+    }
+    form{
+        .inpWrap{
+            display: flex;
+            flex-direction: column;
+            input{
+            height: 40px;
+            width: 400px;
+        }
+        }
+        h1{
+            font-size: 20px;
+        }
+        
+        .btn{
+            width: 400px;
+            border-color: white;
+            padding: 6px 20px;
+            border-radius: 10px;
+            color: white;
+            &:hover{
+                background: white;
+                color: rgb(0, 128, 150);
+            }
+        }
+    }
+    .check{
+        p{
+            font-size: 14px;
+        }
+    }
+}
+}
+@media (max-width: 767px) {
+  .news{
+    img{display: none;}
+  }
 }
     
 </style>

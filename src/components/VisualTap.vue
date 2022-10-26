@@ -46,6 +46,8 @@ export default {
     }
 }
     .tabVisual{
+        height: 500px;
+        margin-bottom: 100px;
         .tab{
             margin: 0 30px;
             font-size: 20px;
@@ -77,6 +79,11 @@ export default {
   
 }
 @media (max-width: 991px) {
+    .tabVisual{
+        height: 600px;
+        margin-bottom: 100px;
+        
+    }
     .tabTop{
         flex-direction: column;
         align-items: start;
