@@ -15,6 +15,7 @@
   <main-movie></main-movie>
   <main-sponsor :koData="kData"></main-sponsor>
   <main-news></main-news>
+  <main-footer></main-footer>
 </template>
 
 <script>
@@ -27,6 +28,7 @@
   import VisualTap from "./components/VisualTap.vue"
   import MainMovie from "./components/MainMovie.vue"
   import MainNews from "./components/MainNews.vue"
+  import MainFooter from "./components/MainFooter.vue"
 
   import kData from "@/data/09support.js";
   import bData from "@/data/02iconBanner.js";
@@ -51,7 +53,8 @@ export default {
     MainNotice,
     MainMovie,
     MainSponsor,
-    MainNews
+    MainNews,
+    MainFooter
 },
 data(){
   return{

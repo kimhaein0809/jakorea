@@ -4,11 +4,25 @@
         <form action="">
             <h1>JA Korea 뉴스레터 구독하기</h1>
             <div class="d-flex gap-4">
-                <input type="text" name="name" placeholder="이름">
-                <input type="text" name="email" placeholder="이메일">
+                <div class="name position-relative">
+                    <i class="fa-regular fa-user position-absolute text-white"></i>
+                    <input type="text" name="name" placeholder="이름">
+                </div>
+                <div class="email position-relative">
+                    <i class="fa-regular fa-envelope position-absolute text-white"></i>
+                    <input type="text" name="email" placeholder="이메일">
+                </div>
                 <div class="btn">
                     신청하기
                 </div>
+            </div>
+            <div class="check">
+                <label for="agree01" class="d-flex align-items-center">
+                    <input type="checkbox" class="checkbox position-relative">
+                    <i class="fa-regular fa-circle-check off"></i>
+                    <i class="fa-solid fa-circle-check on"></i>
+                    <p>뉴스레터 구독을 위한 이름 및 이메일 주소 수집에 동의합니다.</p>
+                </label>
             </div>
         </form>
         <div class="imgWrap position-absolute"><img src="../../public/images/subscribe-img.png" alt="" class="w-100"></div>
@@ -17,6 +31,7 @@
 </template>
 
 <script>
+
 export default {
 
 }
@@ -25,6 +40,47 @@ export default {
 <style lang="scss">
 .news{
     margin-bottom: 180px;
+    .check{
+        .checkbox{
+            opacity: 0;
+            z-index: 1;
+            margin-left: 5px;
+            cursor: pointer;
+            height: 20px;
+        }
+        .off{
+            position: absolute;
+            font-size: 24px;
+            color: #285f74;
+            cursor: pointer;
+        }
+        .on{
+            position: absolute;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+        p{
+            margin-top: 1rem;
+            padding-left: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    .email,.name{
+        i{
+            font-size: 24px;
+            left: 24px;top: 24px;
+            &.active{
+
+            }
+        }
+    }
     .imgWrap{
         width: 300px;
         bottom: 46px;
@@ -33,7 +89,7 @@ export default {
     .bg{
         padding:46px 54px ;
         border-radius: 20px;
-        background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(2, 157, 173)), to(rgb(0, 142, 159)));;
+        background: linear-gradient( -45deg,#00a0af,#00c0ca,#00c0ca,#00a0af);
     }
     form{
         h1{

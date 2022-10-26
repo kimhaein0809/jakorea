@@ -92,9 +92,12 @@ export default {
 
 }
 @media (max-width: 991px) {
- .container{
-  flex-direction: column;
- }
+  .notice{
+    .container{
+      flex-direction: column;
+    }
+  }
+ 
  .noticeBox {
     width: 100%;
 }
