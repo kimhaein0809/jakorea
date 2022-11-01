@@ -11,11 +11,15 @@
     :news="news"
     >
   </visual-tap>
-  <main-notice :noData="nData" :reData="rData"></main-notice>
+  <main-notice :noData="nData" :reData="rData" @modalOpen="modalView"></main-notice>
+  
   <main-movie></main-movie>
   <main-sponsor :koData="kData"></main-sponsor>
   <main-news></main-news>
   <main-footer></main-footer>
+  <div class="start" :class="{end:mView}">
+    <main-modal :mView="mView" :mData="mData" :banData="nData" @closeModal="mView=false"></main-modal>
+  </div>
 </template>
 
 <script>
@@ -29,6 +33,7 @@
   import MainMovie from "./components/MainMovie.vue"
   import MainNews from "./components/MainNews.vue"
   import MainFooter from "./components/MainFooter.vue"
+  import MainModal from "./components/MainModal.vue"
 
   import kData from "@/data/09support.js";
   import bData from "@/data/02iconBanner.js";
@@ -54,7 +59,8 @@ export default {
     MainMovie,
     MainSponsor,
     MainNews,
-    MainFooter
+    MainFooter,
+    MainModal
 },
 data(){
   return{
@@ -65,7 +71,16 @@ data(){
     news: news,
     nData: nData,
     rData: rData,
-    kData: kData
+    kData: kData,
+    mView:false,
+    mData:1,
+  }
+},
+methods:{
+  modalView(num,name){
+    console.log(num,name);
+    this.mView = true;
+    this.mData = num;
   }
 }
 }
@@ -73,6 +88,12 @@ data(){
 
 <style lang="scss">
  @import url(./assets/style.css);
-
+.start{
+  opacity: 0;
+  transition: .3s;
+  &.end{
+    opacity: 1;
+  }
+}
 
 </style>

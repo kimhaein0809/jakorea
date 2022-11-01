@@ -6,14 +6,12 @@
           <h1>모집공고</h1>
         </div>
         <div class="noBtm" v-for="(item,i) in noData" :key="i">
-          <div class="noItem row">
-              <a href="#">
+          <div class="noItem"  @click="$emit('modalOpen',i,item.name)">
                 <span class="tag col-2 text-center">모집중</span>
                 <div class="bdtxt">
                   <h3>{{item.title}}</h3>
                   <p>{{item.date}}</p>
                 </div>
-              </a>
             </div>
           </div>
       </div>
@@ -22,13 +20,11 @@
           <h1>결과발표</h1>
         </div>
         <div class="noBtm" v-for="(item,i) in reData" :key="i">
-          <div class="noItem">
-              <a href="#">
+          <div class="noItem" @click="$emit('modalOpen',i,item.name)">
                 <div class="bdtxt">
                   <h3>{{item.title}}</h3>
                   <p>{{item.date}}</p>
                 </div>
-              </a>
             </div>
           </div>
       </div>
@@ -61,7 +57,7 @@ export default {
     border-bottom: 1px solid #e7eced;
     position: relative;
     transition: .3s;
-  a{
+    cursor: pointer;
     display: flex;
     align-items: flex-start;
     padding: 35px 25px;
@@ -69,7 +65,7 @@ export default {
     transition: .3s;
     position: relative;
     width: 100%;
-  }
+
 }
   h3{
     font-size: 22px;font-weight: bold;
